@@ -1,0 +1,22 @@
+let d1 = dayjs("2018-06-03");
+console.log(d1.format());
+
+let d2 = dayjs.unix(1530471537);
+console.log(d2.format());
+
+let d3 = dayjs(new Date(2011, 11, 22));
+console.log(d3.format());
+
+
+let now = dayjs();
+
+console.log("ISO")
+console.log(now.format());
+
+console.log("\nTime")
+console.log(now.format("HH:mm:ss"));
+console.log(now.format("h:mm:ss a"));
+
+console.log("\nDate")
+console.log(now.format("dddd, MMMM D YYYY"));
+console.log(now.format("YYYY-MM-DD"));

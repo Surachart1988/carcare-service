@@ -1,0 +1,13 @@
+diff a/assets/scss/iview-input.scss b/assets/scss/iview-input.scss	(rejected hunks)
+@@ -9,6 +9,11 @@
+   border-color: darken($color_background, 5%);
+ }
+ 
++textarea.ivu-input {
++  padding: 7px 13px;
++  font-size: rem(16px);
++}
++
+ .ivu-input-wrapper-large {
+   .ivu-input-icon {
+     line-height: 40px;

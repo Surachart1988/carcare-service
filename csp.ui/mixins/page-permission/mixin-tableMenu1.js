@@ -1,0 +1,313 @@
+export default {
+  data() {
+    return {};
+  },
+  mounted() {},
+  methods: {
+    mockTableDataMenu1() {
+      let data = [];
+      let rowLabel = [
+        "ค้นหาลูกค้า",
+        "ค้นหารถยนต์",
+        "ค้นหาผู้จำหน่าย",
+        "ค้นหาสินค้า"
+      ];
+      for (let i = 0; i < rowLabel.length; i++) {
+        data.push({
+          page: rowLabel[i],
+          createAllow: null,
+          editAllow: null,
+          viewAllow: false,
+          deleteAllow: null,
+          printAllow: null
+        });
+      }
+
+      if (this.modeEdit) {
+        data[0].viewAllow = this.MasterPermisson[0].ViewPermisson;
+        data[1].viewAllow = this.MasterPermisson[1].ViewPermisson;
+        data[2].viewAllow = this.MasterPermisson[2].ViewPermisson;
+        data[3].viewAllow = this.MasterPermisson[3].ViewPermisson;
+      }
+
+      return data;
+    },
+    mockTableColumnsMenu1() {
+      const tableMenu1ColumnList = {
+        name: {
+          title: this.permissionCol.title,
+          key: "page",
+          render: (h, params) => {
+            return h("div", [h("span", " " + params.row.page)]);
+          }
+        },
+        create: {
+          title: this.permissionCol.create,
+          //key: 'page',
+          align: "center",
+          width: 120,
+          render: (h, params) => {
+            const fav = this.tableDataMenu1[params.index].createAllow;
+            const style =
+              fav === false
+                ? {
+                    cursor: "pointer",
+                    color: "#f5f5f5",
+                    backgroundColor: "#f5f5f5",
+                    borderRadius: "30px",
+                    fontSize: "28px",
+                    border: "3px solid #E1E1E1"
+                  }
+                : fav === true
+                ? {
+                    cursor: "pointer",
+                    color: "#00d317",
+                    fontSize: "36px",
+                    borderRadius: "30px",
+                    border: "2px solid #00d317"
+                  }
+                : {
+                    display: "none"
+                  };
+
+            return h("div", [
+              h("Icon", {
+                style: style,
+                props: {
+                  type:
+                    fav === false ? "md-close-circle" : "md-checkmark-circle"
+                },
+                nativeOn: {
+                  click: () => {
+                    this.toggleCRUDP(
+                      params.index,
+                      params.page,
+                      "tableDataMenu1",
+                      "create"
+                    );
+                  }
+                }
+              })
+              // h('span', ' ' + params.row.page)
+            ]);
+          }
+        },
+        edit: {
+          title: this.permissionCol.edit,
+          //key: 'page',
+          align: "center",
+          width: 120,
+          render: (h, params) => {
+            const fav = this.tableDataMenu1[params.index].editAllow;
+            const style =
+              fav === false
+                ? {
+                    cursor: "pointer",
+                    color: "#f5f5f5",
+                    backgroundColor: "#f5f5f5",
+                    borderRadius: "30px",
+                    fontSize: "28px",
+                    border: "3px solid #E1E1E1"
+                  }
+                : fav === true
+                ? {
+                    cursor: "pointer",
+                    color: "#00d317",
+                    fontSize: "36px",
+                    borderRadius: "30px",
+                    border: "2px solid #00d317"
+                  }
+                : {
+                    display: "none"
+                  };
+
+            return h("div", [
+              h("Icon", {
+                style: style,
+                props: {
+                  type:
+                    fav === false ? "md-close-circle" : "md-checkmark-circle"
+                },
+                nativeOn: {
+                  click: () => {
+                    this.toggleCRUDP(
+                      params.index,
+                      params.page,
+                      "tableDataMenu1",
+                      "edit"
+                    );
+                  }
+                }
+              })
+              // h('span', ' ' + params.row.page)
+            ]);
+          }
+        },
+        view: {
+          title: this.permissionCol.view,
+          //key: 'page',
+          align: "center",
+          width: 120,
+          render: (h, params) => {
+            const fav = this.tableDataMenu1[params.index].viewAllow;
+            const style =
+              fav === false
+                ? {
+                    cursor: "pointer",
+                    color: "#f5f5f5",
+                    backgroundColor: "#f5f5f5",
+                    borderRadius: "30px",
+                    fontSize: "28px",
+                    border: "3px solid #E1E1E1"
+                  }
+                : fav === true
+                ? {
+                    cursor: "pointer",
+                    color: "#00d317",
+                    fontSize: "36px",
+                    borderRadius: "30px",
+                    border: "2px solid #00d317"
+                  }
+                : {
+                    display: "none"
+                  };
+
+            return h("div", [
+              h("Icon", {
+                style: style,
+                props: {
+                  type:
+                    fav === false ? "md-close-circle" : "md-checkmark-circle"
+                },
+                nativeOn: {
+                  click: () => {
+                    this.toggleCRUDP(
+                      params.index,
+                      params.page,
+                      "tableDataMenu1",
+                      "view"
+                    );
+                  }
+                }
+              })
+              // h('span', ' ' + params.row.page)
+            ]);
+          }
+        },
+        delete: {
+          title: this.permissionCol.delete,
+          //key: 'page',
+          align: "center",
+          width: 120,
+          render: (h, params) => {
+            const fav = this.tableDataMenu1[params.index].deleteAllow;
+            const style =
+              fav === false
+                ? {
+                    cursor: "pointer",
+                    color: "#f5f5f5",
+                    backgroundColor: "#f5f5f5",
+                    borderRadius: "30px",
+                    fontSize: "28px",
+                    border: "3px solid #E1E1E1"
+                  }
+                : fav === true
+                ? {
+                    cursor: "pointer",
+                    color: "#00d317",
+                    fontSize: "36px",
+                    borderRadius: "30px",
+                    border: "2px solid #00d317"
+                  }
+                : {
+                    display: "none"
+                  };
+
+            return h("div", [
+              h("Icon", {
+                style: style,
+                props: {
+                  type:
+                    fav === false ? "md-close-circle" : "md-checkmark-circle"
+                },
+                nativeOn: {
+                  click: () => {
+                    this.toggleCRUDP(
+                      params.index,
+                      params.page,
+                      "tableDataMenu1",
+                      "delete"
+                    );
+                  }
+                }
+              })
+              // h('span', ' ' + params.row.page)
+            ]);
+          }
+        },
+        print: {
+          title: this.permissionCol.print,
+          //key: 'page',
+          align: "center",
+          width: 120,
+          render: (h, params) => {
+            const fav = this.tableDataMenu1[params.index].printAllow;
+            const style =
+              fav === false
+                ? {
+                    cursor: "pointer",
+                    color: "#f5f5f5",
+                    backgroundColor: "#f5f5f5",
+                    borderRadius: "30px",
+                    fontSize: "28px",
+                    border: "3px solid #E1E1E1"
+                  }
+                : fav === true
+                ? {
+                    cursor: "pointer",
+                    color: "#00d317",
+                    fontSize: "36px",
+                    borderRadius: "30px",
+                    border: "2px solid #00d317"
+                  }
+                : {
+                    display: "none"
+                  };
+
+            return h("div", [
+              h("Icon", {
+                style: style,
+                props: {
+                  type:
+                    fav === false ? "md-close-circle" : "md-checkmark-circle"
+                },
+                nativeOn: {
+                  click: () => {
+                    this.toggleCRUDP(
+                      params.index,
+                      params.page,
+                      "tableDataMenu1",
+                      "print"
+                    );
+                  }
+                }
+              })
+              // h('span', ' ' + params.row.page)
+            ]);
+          }
+        }
+      };
+
+      let data = [
+        tableMenu1ColumnList.name,
+        tableMenu1ColumnList.create,
+        tableMenu1ColumnList.edit,
+        tableMenu1ColumnList.view,
+        tableMenu1ColumnList.delete,
+        tableMenu1ColumnList.print
+      ];
+
+      return data;
+    }
+  }
+};

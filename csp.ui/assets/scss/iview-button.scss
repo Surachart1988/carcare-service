@@ -1,0 +1,87 @@
+.ivu-btn-large {
+  padding: 0 38px;
+}
+
+.ivu-btn {
+  > span {
+    font-weight: bold;
+  }
+}
+
+.ivu-btn-primary {
+  color: $color_font-1;
+  background-color: $color_font-main;
+  border-color: $color_font-main;
+
+  &:hover {
+    background-color: lighten($color_font-main, 3%);
+    border-color: lighten($color_font-main, 3%);
+  }
+
+  &:active {
+    color: $color_font-1;
+    background-color: lighten($color_font-main, 3%);
+    border-color: lighten($color_font-main, 3%);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($color_font-main, 0.2);
+  }
+
+  &.ivu-btn-ghost {
+    color: $color_font-main;
+    background-color: transparent;
+    border-color: $color_font-main;
+
+    &:hover {
+      color: lighten($color_font-main, 5%);
+      background-color: rgba(244,252,248,.5);
+      border-color: lighten($color_font-main, 3%);
+    }
+
+    &:active {
+      color: lighten($color_font-main, 5%);
+      background-color: rgba(244,252,248,.5);
+      border-color: lighten($color_font-main, 3%);
+    }
+  }
+}
+
+.ivu-btn-default {
+  color: $color_font-2;
+  background-color: $color_font-2;
+  border-color: $color_font-2;
+
+  &:hover {
+    background-color: lighten($color_font-2, 3%);
+    border-color: lighten($color_font-2, 3%);
+  }
+
+  &:active {
+    color: $color_font-2;
+    background-color: lighten($color_font-2, 3%);
+    border-color: lighten($color_font-2, 3%);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($color_font-2, 0.2);
+  }
+
+  &.ivu-btn-ghost {
+    color: $color_font-2;
+    background-color: transparent;
+    border-color: $color_font-2;
+
+    &:hover {
+      color: lighten($color_font-2, 5%);
+      background-color: rgba(244,252,248,.5);
+      border-color: lighten($color_font-2, 3%);
+    }
+
+    &:active {
+      color: lighten($color_font-2, 5%);
+      background-color: rgba(244,252,248,.5);
+      border-color: lighten($color_font-2, 3%);
+    }
+  }
+}

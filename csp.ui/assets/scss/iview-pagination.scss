@@ -1,0 +1,24 @@
+.ivu-page-item-active {
+  border-color: $color_font-main;
+
+  a {
+    color: $color_font-main;
+    font-weight: bold;
+  }
+
+  &:hover {
+    a {
+      color: $color_font-main;
+    }
+  }
+}
+
+.ivu-page-item {
+  &:hover {
+    border-color: $color_font-main;
+
+    a {
+      color: $color_font-main;
+    }
+  }
+}

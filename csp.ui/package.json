@@ -1,0 +1,44 @@
+{
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3000"
+    }
+  },
+  "name": "starter",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "latest",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/style-resources": "latest",
+    "cookieparser": "latest",
+    "dayjs": "^1.9.6",
+    "js-cookie": "latest",
+    "nuxt": "latest",
+    "nuxt-purgecss": "latest",
+    "nuxt-webfontloader": "latest",
+    "tm-iview": "^4.4",
+    "vue-content-placeholders": "latest",
+    "vuejs-jwt": "^1.1.0"
+  },
+  "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.3.0",
+    "imagemin-mozjpeg": "latest",
+    "imagemin-pngquant": "latest",
+    "imagemin-svgo": "latest",
+    "lqip-loader": "latest",
+    "node-sass": "^5.0.0",
+    "numeral": "latest",
+    "responsive-loader": "latest",
+    "sass-loader": "^10.1.0",
+    "sharp": "latest",
+    "sugar": "latest",
+    "webp-loader": "latest"
+  }
+}

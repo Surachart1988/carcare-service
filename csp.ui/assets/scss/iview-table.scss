@@ -1,0 +1,180 @@
+.btn-action {
+  margin: 0 5px;
+
+  .a,
+  .b {
+    fill: #9c9c9c;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .a {
+      fill: darken(#9c9c9c, 50%);
+    }
+    .b {
+      fill: darken(#9c9c9c, 50%);
+    }
+  }
+}
+
+.v-divider {
+  background:#9c9c9c;
+  min-width: 1px;
+  min-height: 20px;
+  margin: 0 8px
+}
+
+.ivu-table-tip {
+  border-radius: 28px;
+}
+
+.ivu-table-header {
+  background: $color_background-header-table;
+  border-radius: 28px;
+
+  thead {
+    tr {
+      th {
+        font-weight: normal;
+        border-right: 1px solid #E1E1E1;
+        @include last(1) {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  table {
+    min-height: 56px;
+  }
+}
+
+.ivu-table-fixed-header {
+  background: $color_background-header-table;
+  border-radius: 0 28px 28px 0;
+  
+  thead {
+    tr {
+      th {
+        @include last(1) {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  table {
+    min-height: 56px;
+  }
+}
+
+.ivu-table-fixed-right::before {
+  background-color: transparent;
+}
+
+.ivu-table {
+  background-color: transparent;
+  color: $color_font-2;
+  // max-width: 800px;
+  // overflow: auto;
+
+  th {
+    background-color: transparent;
+    color: $color_font-1;
+    border-bottom: none;
+  }
+
+  td {
+    border-bottom: none;
+  }
+
+  &::before {
+    background-color: transparent;
+  }
+}
+
+
+.ivu-table-stripe {
+  .ivu-table-body {
+    tr {
+      &:nth-child(1n) {
+        td {
+          background-color: transparent;
+        }
+      }
+      &:nth-child(2n) {
+        td {
+          background-color: $color_background-row-table;
+        }
+      }
+      &.ivu-table-row-hover {
+        &:nth-child(1n) {
+          td {
+            background-color: rgba($color_font-main, 0.05);
+          }
+        }
+        &:nth-child(2n) {
+          td {
+            background-color: rgba($color_font-main, 0.05);
+          }
+        }
+      }
+
+      td {
+        border-right: 1px solid #E1E1E1;
+        
+        @include first(1) {
+          border-radius: 28px 0 0 28px;
+        }
+        @include last(1) {
+          border-radius: 0 28px 28px 0;
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  .ivu-table-fixed-body {
+    background-color: $color_background;
+    overflow: visible;
+
+    tr {
+      &:nth-child(1n) {
+        td {
+          background-color: $color_background;
+        }
+      }
+      &:nth-child(2n) {
+        td {
+          background-color: $color_background-row-table;
+        }
+      }
+      &.ivu-table-row-hover {
+        &:nth-child(1n) {
+          td {
+            background-color: #0093450d;
+          }
+        }
+        &:nth-child(2n) {
+          td {
+            background-color: rgba($color_font-main, 0.05);
+          }
+        }
+      }
+
+      td {
+        border-right: 1px solid #E1E1E1;
+        
+        @include first(1) {
+          border-radius: 0 28px 28px 0;
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+.ivu-table-wrapper {
+  max-width: 100%;
+}

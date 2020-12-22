@@ -1,0 +1,27 @@
+@function rem($size) {
+  @return $size / 16px * 1rem;
+}
+
+.ivu-form {
+  .ivu-form-item-label {
+    padding: 0 1rem 0 0;
+    transform: translateY(100%);
+    font-size: rem(16px);
+    margin-top: -2px;
+    color: $color_font-2;
+  }
+
+  .ivu-form-item-content {
+    line-height: 40px;
+  }
+}
+
+.ivu-form-item-required {
+  .ivu-form-item-label {
+    &::before {
+      position: absolute;
+      right: 2px;
+      top: -5px;
+    }
+  }
+}

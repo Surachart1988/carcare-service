@@ -1,0 +1,122 @@
+@function rem($size) {
+  @return $size / 16px * 1rem;
+}
+
+body {
+  color: $color_font-main;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.header {
+  background: $color_background-header;
+  padding: 10px 50px;
+  box-shadow: 0px 2px 5px $color_shadow-1;
+  font-size: rem($fontSize-5);
+  position: relative;
+  z-index: 99;
+}
+
+.title {
+  font-size: rem($fontSize-5);
+  display: inline-flex;
+}
+
+.ivu-card {
+  border-radius: 30px;
+  box-shadow: 0px 5px 5px $color_shadow-1;
+  margin-top: 15px;
+}
+
+.ivu-card-body {
+  padding: 30px 10% 45px;
+  border: none;
+  box-shadow: none;
+}
+
+.ivu-card:hover {
+  box-shadow: 0px 6px 3px $color_shadow-1;
+}
+
+.highlight {
+  color: $color_operation;
+}
+
+.ivu-select-selection {
+  border-radius: 18px;
+  box-shadow: 0px 3px 2px $color_shadow-1;
+}
+
+.ivu-select-single {
+  .ivu-select-selection {
+    height: 45px;
+
+    .ivu-select-placeholder, .ivu-select-selected-value  {
+      padding-left: 14px;
+      text-align: center;
+      line-height: 45px;
+      font-size: 24px;
+      height: 45px;
+    }
+  }
+}
+
+.ivu-select {
+  color: $color_font-1;
+}
+
+.ivu-select-item {
+  font-size: 24px !important;
+  color: $color_font-1;
+}
+
+.ivu-select-item-selected {
+  color: $color_font-main;
+
+  :hover {
+    color: $color_font-main;
+  }
+}
+
+.ivu-icon-ios-arrow-down {
+  &::before {
+    content: "\F33D";
+    font-size: rem($fontSize-1);
+  }
+}
+
+.ivu-select-visible {
+  .ivu-select-selection {
+    box-shadow: 0 0 0 2px $color_shadow-1;
+  }
+}
+
+.ivu-select-selection-focused {
+  border-color: $color_border-1;
+}
+
+.ivu-input {
+  padding: 4px 18px;
+  line-height: 45px;
+  font-size: 24px;
+  height: 45px;
+  border-radius: 18px;
+  box-shadow: 0px 3px 2px $color_shadow-1;
+}
+
+.ivu-input-icon {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  font-size: rem($fontSize-3);
+  color: $color_font-main;
+  transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear, box-shadow 0.2s linear;
+}
+
+.ivu-btn {
+  height: auto;
+}

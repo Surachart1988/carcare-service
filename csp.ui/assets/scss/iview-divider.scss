@@ -1,0 +1,16 @@
+.ivu-divider.main-divider {
+  background: rgba($color_font-main, 0.5);
+  margin: 15px 0;
+}
+
+.ivu-divider-inner-text {
+  border: 1px solid rgba($color_font-main, 0.5);
+  border-radius: 34px;
+  color: $color_font-main;
+  padding: 15px 30px;
+  font-size: $fontSize-2;
+}
+
+.ivu-divider-horizontal.ivu-divider-with-text-center::after, .ivu-divider-horizontal.ivu-divider-with-text-center::before, .ivu-divider-horizontal.ivu-divider-with-text-left::after, .ivu-divider-horizontal.ivu-divider-with-text-left::before, .ivu-divider-horizontal.ivu-divider-with-text-right::after, .ivu-divider-horizontal.ivu-divider-with-text-right::before {
+  border-top: 1px solid rgba($color_font-main, 0.5);
+}

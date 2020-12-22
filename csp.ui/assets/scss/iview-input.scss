@@ -1,0 +1,103 @@
+@function rem($size) {
+  @return $size / 16px * 1rem;
+}
+
+.ivu-input-large {
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px 14px;
+  border-color: darken($color_background, 5%);
+}
+
+.ivu-input-wrapper-large {
+  .ivu-input-icon {
+    line-height: 40px;
+  }
+}
+
+textarea {
+  min-height: 40px !important;
+}
+
+.ivu-switch-large {
+  width: 160px;
+  height: 40px;
+  line-height: 38px;
+}
+
+.ivu-switch {
+  border-radius: 100px;
+  border: 1px solid $color_font-2;
+  background-color:#e1e1e1;
+}
+
+.ivu-switch::after {
+  width: 68px;
+  height: 36px;
+  border-radius: 100px;
+  background-color: $color_font-2;
+}
+
+.ivu-switch-large.ivu-switch-checked::after {
+  left: 89px;
+}
+
+.ivu-switch-checked {
+  background-color: $color_font-main;
+
+  .ivu-switch-inner {
+    color: $color_font-1;
+    left: 15px;
+  }
+}
+
+.ivu-switch-inner {
+  color: $color_font-2;
+  font-size: rem(16px);
+  position: absolute;
+  left: 78px;
+}
+
+.ivu-input[disabled],
+fieldset[disabled] .ivu-input {
+  background-color: $color_input-disabled;
+  color: $color_font-2;
+
+  &::placeholder {
+    color: $color_font-2;
+  }
+}
+
+.ivu-select-item-selected {
+  color: $color_font-2;
+
+  &:hover {
+    color: $color_font-main;
+  }
+}
+
+.ivu-input-number {
+  height: 40px;
+  line-height: 40px;
+  font-size: $fontSize-1;
+  width: 100%;
+}
+
+.ivu-input-number-handler {
+  height: 20px;
+}
+
+.ivu-input-number-input {
+  height: 40px;
+  line-height: 40px;
+}
+
+.ivu-input-number-handler-down-inner,
+.ivu-input-number-handler-up-inner {
+  height: 20px;
+  line-height: 20px;
+}
+
+.ivu-input-number-input-wrap {
+  height: 40px;
+}

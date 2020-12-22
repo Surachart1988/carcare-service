@@ -1,0 +1,32 @@
+#tab-customers-registration {
+  .ivu-tabs-tab {
+    width: 25%;
+    padding: 16px 16px;
+  }
+}
+
+.ivu-tabs {
+  overflow: inherit;
+}
+
+.ivu-tabs-nav {
+  width: 100%;
+  font-size: $fontSize-2;
+  .ivu-tabs-tab {
+    &-active {
+      color: $color_font-main;
+    }
+    &:hover {
+      color: $color_font-main;
+    }
+  }
+
+  .ivu-tabs-ink-bar {
+    background-color: $color_font-main;
+    height: 4px;
+  }
+}
+
+.ivu-tabs-bar {
+  margin-bottom: 50px;
+}

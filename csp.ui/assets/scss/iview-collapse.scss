@@ -1,0 +1,52 @@
+.ivu-collapse {
+  border-top: none;
+  border-color: rgba($color_font-main, 0.5);
+}
+
+.ivu-collapse-simple {
+  background-color: transparent;
+
+  > .ivu-collapse-item {
+    border-top: none;
+    border-top: 1px solid rgba($color_font-main, 0.5);
+
+    > .ivu-collapse-header {
+      padding-left: 0px;
+      padding-right: 16px;
+      height: 60px;
+      line-height: 60px;
+      color: $color_font-main;
+      font-size: $fontSize-collapseHeader;
+      // border-bottom-color: rgba($color_font-main, 0.5);
+
+      > i {
+        margin-left: 14px;
+        margin-right: 0px;
+        position: absolute;
+        right: 14px;
+        transform:translateY(100%) scaleX(1) scaleY(1.1);
+        font-size: 20px;
+      }
+    }
+  }
+  
+  > .ivu-collapse-item.ivu-collapse-item-active {
+
+    > .ivu-collapse-header {
+      border-bottom: 2px solid $color_font-main;
+      margin-bottom: 20px;
+      
+      > i {
+        transform:translateY(100%) rotate(90deg) scaleX(1) scaleY(1.2);
+      }
+    }
+  }
+
+  .ivu-collapse-content {
+    background-color: transparent;
+
+    > .ivu-collapse-content-box {
+      padding-bottom: 45px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.ivu-radio-wrapper {
+  color: $color_font-2;
+}
+
+.ivu-radio-checked {
+  .ivu-radio-inner {
+    // border-color: $color_font-main;
+    &::after {
+      // background-color: $color_font-main;
+    }
+  }
+}

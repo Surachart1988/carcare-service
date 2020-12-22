@@ -1,0 +1,14 @@
+<div v-if="post == ''">
+      <content-placeholders>
+        <content-placeholders-heading/>
+        <content-placeholders-text :lines="3" />
+      </content-placeholders>
+    </div>
+    <div v-if="post != ''">
+      <h1>{{ post.title }}</h1>
+      <div>{{ post.body }}</div>
+      <author :author-id="post.userId"/>
+    </div>
+
+
+    เป็นแค่การวาง svg ไว้แสดงรอเนื้อหาโหลดเสร็จเฉยๆ

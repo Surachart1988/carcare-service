@@ -1,0 +1,9 @@
+<div v-html="require('~/assets/my-icon.svg?include')">
+
+<picture>
+    <source :srcSet="require('~/assets/my-image.jpg?webp')" type="image/webp" />
+    <source :srcSet="require('~/assets/my-image.jpg')" type="image/jpeg" />
+    <img :src="require('~/assets/my-image.jpg')" />
+  </picture>
+
+  <img :src="require('~/assets/my-image.jpg?lqip')">

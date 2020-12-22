@@ -1,0 +1,71 @@
+.ivu-modal {
+  top: 0px;
+}
+
+.ivu-modal-wrap {
+  overflow-x: hidden;
+}
+
+.ivu-modal-header {
+  padding: 30px 30px;
+  p {
+    font-size: $fontSize-Header;
+    color: $color_font-main;
+    padding: 0px 0px 40px 0px;
+    border-bottom: 1px solid rgba($color_font-main, 0.5);
+  }
+}
+
+.ivu-modal-body {
+  padding: 0% 10%;
+}
+
+.ivu-modal-content {
+  background-color: $color_background;
+}
+
+  .ivu-modal-body {
+    padding: 0 30px 0 30px;
+    // @media (max-width: 1280px) {
+    //   padding: 0% 30px 15px 30px;
+    // }
+  }
+  .ivu-modal {
+    margin: 50px auto;
+  }
+
+.ivu-modal-header {
+  border-bottom: none;
+
+  p {
+    overflow: visible;
+    font-weight: bold;
+  }
+}
+
+.ivu-modal-footer {
+  border-top: none;
+  padding: 60px 18px 30px 18px;
+}
+
+.vertical-center-modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ivu-modal{
+      top: 0;
+  }
+}
+
+.custom-modal {
+  p {
+    color: $color_font-2;
+    font-size: $fontSize-Header;
+  }
+  .icon-confirm {
+    font-size:60px;
+    color:#0081CB;
+    margin-bottom:15px;
+  }
+}

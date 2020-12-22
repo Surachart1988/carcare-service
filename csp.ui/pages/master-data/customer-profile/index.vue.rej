@@ -1,0 +1,10 @@
+diff a/pages/master-data/customer-profile/index.vue b/pages/master-data/customer-profile/index.vue	(rejected hunks)
+@@ -1014,7 +1014,7 @@
+           title: 'คำสั่ง',
+           slot: 'action',
+           width: 150,
+-          Fixed: 'right',
++          fixed: 'right',
+           align: 'center'
+         }
+       ]
